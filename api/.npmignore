@@ -69,6 +69,7 @@ $RECYCLE.BIN/
 *.log
 *.sql
 *.sqlite
+*.sqlite3
 
 
 ############################
@@ -99,7 +100,6 @@ node_modules
 # Tests
 ############################
 
-test
 testApp
 coverage
 
@@ -112,7 +112,7 @@ bower_components
 
 
 ############################
-# Strapi Studio
+# Production config
 ############################
 
-config/studio.json
+**/production/

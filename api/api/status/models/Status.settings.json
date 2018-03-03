@@ -1,0 +1,17 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "status",
+    "description": "Status types"
+  },
+  "attributes": {
+    "TYPE": {
+      "type": "string"
+    },
+    "todo": {
+      "collection": "todo",
+      "via": "status"
+    }
+  }
+}

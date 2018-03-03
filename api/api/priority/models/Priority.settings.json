@@ -1,0 +1,17 @@
+{
+  "connection": "default",
+  "collectionName": "priority",
+  "info": {
+    "name": "priority",
+    "description": "Priority"
+  },
+  "attributes": {
+    "type": {
+      "type": "string"
+    },
+    "todos": {
+      "collection": "todo",
+      "via": "priority"
+    }
+  }
+}
