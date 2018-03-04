@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Concepts.js service
+ * Concept.js service
  *
  * @description: A set of functions similar to controller's actions to avoid code duplication.
  */
@@ -18,43 +18,43 @@ module.exports = {
    */
 
   fetchAll: (params) => {
-    const convertedParams = strapi.utils.models.convertParams('concepts', params);
+    const convertedParams = strapi.utils.models.convertParams('concept', params);
 
-    return Concepts
+    return Concept
       .find()
       .where(convertedParams.where)
       .sort(convertedParams.sort)
       .skip(convertedParams.start)
       .limit(convertedParams.limit)
-      .populate(_.keys(_.groupBy(_.reject(strapi.models.concepts.associations, {autoPopulate: false}), 'alias')).join(' '));
+      .populate(_.keys(_.groupBy(_.reject(strapi.models.concept.associations, {autoPopulate: false}), 'alias')).join(' '));
   },
 
   /**
-   * Promise to fetch a/an concepts.
+   * Promise to fetch a/an concept.
    *
    * @return {Promise}
    */
 
   fetch: (params) => {
-    return Concepts
-      .findOne(_.pick(params, _.keys(Concepts.schema.paths)))
-      .populate(_.keys(_.groupBy(_.reject(strapi.models.concepts.associations, {autoPopulate: false}), 'alias')).join(' '));
+    return Concept
+      .findOne(_.pick(params, _.keys(Concept.schema.paths)))
+      .populate(_.keys(_.groupBy(_.reject(strapi.models.concept.associations, {autoPopulate: false}), 'alias')).join(' '));
   },
 
   /**
-   * Promise to add a/an concepts.
+   * Promise to add a/an concept.
    *
    * @return {Promise}
    */
 
   add: async (values) => {
-    const data = await Concepts.create(_.omit(values, _.keys(_.groupBy(strapi.models.concepts.associations, 'alias'))));
-    await strapi.hook.mongoose.manageRelations('concepts', _.merge(_.clone(data), { values }));
+    const data = await Concept.create(_.omit(values, _.keys(_.groupBy(strapi.models.concept.associations, 'alias'))));
+    await strapi.hook.mongoose.manageRelations('concept', _.merge(_.clone(data), { values }));
     return data;
   },
 
   /**
-   * Promise to edit a/an concepts.
+   * Promise to edit a/an concept.
    *
    * @return {Promise}
    */
@@ -63,12 +63,12 @@ module.exports = {
     // Note: The current method will return the full response of Mongo.
     // To get the updated object, you have to execute the `findOne()` method
     // or use the `findOneOrUpdate()` method with `{ new:true }` option.
-    await strapi.hook.mongoose.manageRelations('concepts', _.merge(_.clone(params), { values }));
-    return Concepts.update(params, values, { multi: true });
+    await strapi.hook.mongoose.manageRelations('concept', _.merge(_.clone(params), { values }));
+    return Concept.update(params, values, { multi: true });
   },
 
   /**
-   * Promise to remove a/an concepts.
+   * Promise to remove a/an concept.
    *
    * @return {Promise}
    */
@@ -76,10 +76,10 @@ module.exports = {
   remove: async params => {
     // Note: To get the full response of Mongo, use the `remove()` method
     // or add spent the parameter `{ passRawResult: true }` as second argument.
-    const data = await Concepts.findOneAndRemove(params, {})
-      .populate(_.keys(_.groupBy(_.reject(strapi.models.concepts.associations, {autoPopulate: false}), 'alias')).join(' '));
+    const data = await Concept.findOneAndRemove(params, {})
+      .populate(_.keys(_.groupBy(_.reject(strapi.models.concept.associations, {autoPopulate: false}), 'alias')).join(' '));
 
-    _.forEach(Concepts.associations, async association => {
+    _.forEach(Concept.associations, async association => {
       const search = (_.endsWith(association.nature, 'One')) ? { [association.via]: data._id } : { [association.via]: { $in: [data._id] } };
       const update = (_.endsWith(association.nature, 'One')) ? { [association.via]: null } : { $pull: { [association.via]: data._id } };
 

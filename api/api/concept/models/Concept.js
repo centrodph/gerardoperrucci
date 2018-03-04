@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Lifecycle callbacks for the `Concepts` model.
+ * Lifecycle callbacks for the `Concept` model.
  */
 
 module.exports = {
