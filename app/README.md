@@ -17,3 +17,11 @@
 - [ ] Add fetch data from server
 
 - [ ] Add Contact form
+
+- [ ] Add Contact form
+
+- [ ] Add HomePage content
+
+- [ ] Add AboutPage content
+
+- [ ] Add Labs content
