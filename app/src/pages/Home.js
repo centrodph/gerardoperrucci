@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { StyleSheet, Text, View, Button } from "react-native";
+import React, { Component } from 'react';
+import { StyleSheet, Text, View, Button } from 'react-native';
 
 class Home extends Component {
   render() {
@@ -8,7 +8,7 @@ class Home extends Component {
       <View style={styles.container}>
         <Text>Gerardo Perruci Home Page</Text>
         <Button
-          onPress={() => navigate("NestedHome", { name: "NestedHome" })}
+          onPress={() => navigate('NestedHome', { name: 'NestedHome' })}
           title="NestedHomeTitle"
         />
       </View>
@@ -19,10 +19,10 @@ class Home extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#FFF",
-    alignItems: "center",
-    justifyContent: "center"
-  }
+    backgroundColor: '#FFF',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
 });
 
 export default Home;

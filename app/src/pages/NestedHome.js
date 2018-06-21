@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import React, { Component } from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 
 class NestedHome extends Component {
   render() {
@@ -14,10 +14,10 @@ class NestedHome extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "pink",
-    alignItems: "center",
-    justifyContent: "center"
-  }
+    backgroundColor: 'pink',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
 });
 
 export default NestedHome;

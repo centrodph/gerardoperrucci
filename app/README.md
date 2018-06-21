@@ -5,3 +5,15 @@
 ### React Navigation:
 
 . Docs : https://github.com/react-navigation/react-navigation
+
+### TODO
+
+. Add ESLint
+
+. Add Redux
+
+. Add Unit Test
+
+. Add fetch data from server
+
+. Add Contact form
