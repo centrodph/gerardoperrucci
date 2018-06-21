@@ -8,12 +8,12 @@
 
 ### TODO
 
-. Add ESLint
+- [x] Add ESLint
 
-. Add Redux
+- [ ] Add Redux
 
-. Add Unit Test
+- [ ] Add Unit Test
 
-. Add fetch data from server
+- [ ] Add fetch data from server
 
-. Add Contact form
+- [ ] Add Contact form
