@@ -2,6 +2,10 @@
 
 . Create React Native App: https://github.com/react-community/create-react-native-app
 
+### Testing
+
+- Jest: https://facebook.github.io/jest/docs/en/tutorial-react-native.html
+
 ### React Navigation:
 
 . Docs : https://github.com/react-navigation/react-navigation
