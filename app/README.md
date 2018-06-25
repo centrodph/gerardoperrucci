@@ -6,13 +6,15 @@
 
 - Jest: https://facebook.github.io/jest/docs/en/tutorial-react-native.html
 
-### React Navigation:
+### Libraries & Docs:
 
 - Flux action standard: https://github.com/redux-utilities/flux-standard-action
 
 - React Navigation : https://github.com/react-navigation/react-navigation
 
 - Redux Saga: https://github.com/redux-saga/redux-saga
+
+- Fetch: https://developer.mozilla.org/en-US/docs/Web/API/Request
 
 ### TODO
 

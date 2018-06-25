@@ -1,4 +1,4 @@
-import { createBottomTabNavigator, StackNavigator } from 'react-navigation';
+import { createBottomTabNavigator, createStackNavigator } from 'react-navigation';
 import Home from './pages/Home';
 import NestedHome from './pages/NestedHome';
 import About from './pages/About';
@@ -6,7 +6,7 @@ import About from './pages/About';
 export default createBottomTabNavigator(
   {
     Main: {
-      screen: StackNavigator({
+      screen: createStackNavigator({
         Home: {
           screen: Home,
         },
