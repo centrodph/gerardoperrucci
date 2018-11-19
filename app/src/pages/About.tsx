@@ -14,7 +14,7 @@ class About extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>About me page</Text>
+        <Text>My page about</Text>
       </View>
     );
   }
